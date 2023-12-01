@@ -4,6 +4,6 @@ const elevatorController = require("../controlers/elevatorController");
 const router = express.Router();
 
 router.put("/updateElevators", elevatorController.updateElevators);
-router.post("/requestElevator", elevatorController.requestElevator);
+router.get("/requestElevator", elevatorController.requestElevator);
 
 module.exports = router;

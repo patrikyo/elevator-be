@@ -27,7 +27,8 @@ function updateElevators(req, res) {
 }
 
 function requestElevator(req, res) {
-  const { requestedFloor } = req.body;
+  const requestedFloor = parseInt(req.query.requestedFloor, 10);
+
   const selectedElevator = chooseElevator(requestedFloor, elevators);
   const direction = getDirection(elevators[selectedElevator], requestedFloor);
   if (selectedElevator !== -1) {
